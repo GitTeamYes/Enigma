@@ -81,20 +81,14 @@ inline int convertCharToNumber(char charInput)
 		case'W':
 			intTempNum = 22;
 			break;
-		case'V':
+		case'X':
 			intTempNum = 23;
 			break;
-		case'W':
+		case'Y':
 			intTempNum = 24;
 			break;
-		case'X':
-			intTempNum = 25;
-			break;
-		case'Y':
-			intTempNum = 26;
-			break;
 		case'Z':
-			intTempNum = 27;
+			intTempNum = 25;
 			break;
 			
 		default:
