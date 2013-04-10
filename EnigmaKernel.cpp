@@ -24,6 +24,79 @@ inline int convertCharToNumber(char charInput)
 		case 'D':
 			intTempNum = 3;
 			break;
+		case'E':
+			intTempNum = 4;
+			break;
+		case'F':
+			intTempNum = 5;
+			break;
+		case'G':
+			intTempNum = 6;
+			break;
+		case'H':
+			intTempNum = 7;
+			break;
+		case'I':
+			intTempNum = 8;
+			break;
+		case'J':
+			intTempNum = 9;
+			break;
+		case'K':
+			intTempNum = 10;
+			break;
+		case'L':
+			intTempNum = 11;
+			break;
+		case'M':
+			intTempNum = 12;
+			break;
+		case'N':
+			intTempNum = 13;
+			break;
+		case'O':
+			intTempNum = 14;
+			break;
+		case'P':
+			intTempNum = 15;
+			break;
+		case'Q':
+			intTempNum = 16;
+			break;
+		case'R':
+			intTempNum = 17;
+			break;
+		case'S':
+			intTempNum = 18;
+			break;
+		case'T':
+			intTempNum = 19;
+			break;
+		case'U':
+			intTempNum = 20;
+			break;
+		case'V':
+			intTempNum = 21;
+			break;
+		case'W':
+			intTempNum = 22;
+			break;
+		case'V':
+			intTempNum = 23;
+			break;
+		case'W':
+			intTempNum = 24;
+			break;
+		case'X':
+			intTempNum = 25;
+			break;
+		case'Y':
+			intTempNum = 26;
+			break;
+		case'Z':
+			intTempNum = 27;
+			break;
+			
 		default:
 			cout << "Error Input Character\n";
 			break;
@@ -49,6 +122,73 @@ inline string convertNumberToString(int intInput)
 		case 3:
 			stringTempString = "D";
 			break;
+		case 4:
+			stringTempString = "E";
+			break;
+		case 5:
+			stringTempString = "F";
+			break;
+		case 6:
+			stringTempString = "G";
+			break;
+		case 7:
+			stringTempString = "H";
+			break;
+		case 8:
+			stringTempString = "I";
+			break;
+		case 9:
+			stringTempString = "J";
+			break;
+		case 10:
+			stringTempString = "K";
+			break;
+		case 11:
+			stringTempString = "L";
+			break;
+		case 12:
+			stringTempString = "M";
+			break;
+		case 13:
+			stringTempString = "N";
+			break;
+		case 14:
+			stringTempString = "O";
+			break;
+		case 15:
+			stringTempString = "P";
+			break;
+		case 16:
+			stringTempString = "Q";
+			break;
+		case 17:
+			stringTempString = "R";
+			break;
+		case 18:
+			stringTempString = "S";
+			break;
+		case 19:
+			stringTempString = "T";
+			break;
+		case 20:
+			stringTempString = "U";
+			break;
+		case 21:
+			stringTempString = "V";
+			break;
+		case 22:
+			stringTempString = "W";
+			break;
+		case 23:
+			stringTempString = "X";
+			break;
+		case 24:
+			stringTempString = "Y";
+			break;
+		case 25:
+			stringTempString = "Z";
+			break;
+		
 		default:
 			cout << "Error Output Number\n";
 			break;
