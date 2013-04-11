@@ -216,7 +216,7 @@ void main()
 
 
 	// Declare the modulo constant for this particular Enigma machine.
-	const int N = 4;
+	const int N = 26;
 	// Declare the fixed rotor, stepping rotors (hereafter simply called rotors), 
 	// reflector & plug board.  Note, the fixed rotor is just a rotor that does not 
 	// turn and has the identity mapping, i.e., {0, 1, 2, 3}.  Note, the plug board 
@@ -224,13 +224,17 @@ void main()
 	// identity mapping, and only pairwise swaps (mappings) are allowed.
 	// The integers in the arrays are aliases for the letters from the alphabet:
 	// 0 = A, 1 = B, 2 = C, 3 = D, 4 = E, 5 = F, 6 = G, 7 = H, 8 = I, 9 = J, etc.
-	int intRotor1[N] = {2, 3, 1, 0};
-	int intRotor2[N] = {1, 3, 2, 0};
-	int intRotor3[N] = {0, 3, 1, 2};
-	int intRotor4[N] = {2, 1, 3, 0};
-	int intRotor5[N] = {3, 2, 1, 0};
+
+		//http://en.wikipedia.org/wiki/Enigma_rotor_details
+		//Site rotor info was obtained from, German Rocket railway set
+
+	int intRotor1[N] = {10,7,4,17,15,24,21,19,3,1,13,9,6,18,22,20,16,14,5,23,11,2,12,26,25,8};
+	int intRotor2[N] = {14,20,26,16,19,6,2,15,11,13,23,18,3,10,4,9,22,12,1,5,25,21,24,8,7,17};
+	int intRotor3[N] = {10,22,9,21,2,8,20,3,4,25,1,11,5,17,26,16,15,19,7,24,14,18,13,23,6,12};
+	int intRotor4[N] = {17,25,8,15,7,14,5,3,22,16,21,26,20,6,4,10,1,24,23,13,11,9,19,18,2,12};
+	int intRotor5[N] = {17,23,5,18,20,26,21,9,15,1,19,4,6,7,8,10,11,16,25,24,3,22,2,14,13,12};
 	// Identity transformation.
-	int intFixedRotor[N] = {0, 1, 2, 3};
+	int intFixedRotor[N] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25};
 	// Reflector Rules:
 	// No index is allowed to map back to itself, i.e., the following is not allowed 
 	// [i] = i, and, and this is equally important, for each [i] = j there must be a [j] = i, 
@@ -243,7 +247,7 @@ void main()
 	// choices is the identity mapping, [i] = i.  The second pair has only one (1) possible choice 
 	// because one (1) of the two (2) choices is the identity mapping, [j] = j.  Therefore, the 
 	// total possible number of Reflectors is 3 x 1 = 3.
-	int intReflector[N] = {3, 2, 1, 0};
+	int intReflector[N] = {25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
 	// Plug Board Rules:
 	// The plug board interchanges pairs of letters, and only pairs of letters.  Because of this 
 	// restriction to pairwise interchanges, the array representing the plug board is bidirectional  
@@ -252,7 +256,7 @@ void main()
 	// of the stepping rotor.  The forward version of the stepping rotor is used when the signal 
 	// is propagating from the fixed rotor to the reflector, while the reverse version is used 
 	// when the signal is propagating from the reflector to the fixed rotor. 
-	int intPlugBoard[N] = {0, 1, 2, 3};
+	int intPlugBoard[N] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25};
 
 	// Declare the stepping rotor slots or positions.
 	int intSlowRotorFwd[N];
@@ -446,7 +450,7 @@ void main()
 	// Invoke the regex Contructor to create a regular expression object.
 	// The following regular expression accepts only a single letter, A 
 	// through D or a semicolon.   
-	regex expression1("[a-dA-D;]{1}");
+	regex expression1("[a-zA-Z;]{1}");
 	cout << "*******************************************************************************\n";
 	cout << "*******************   Welcome to the Enigma Program   *************************\n";
 	cout << "*******************************************************************************\n";
