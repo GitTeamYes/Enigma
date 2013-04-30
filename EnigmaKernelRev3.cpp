@@ -599,7 +599,8 @@ void main()
 	cout << "\n\n";
 	cout << "Initial Key Code:\n";
 	cout << "Slow Key: " << convertNumberToString(SlowTopIndex) << "  Medium Key: " << convertNumberToString(MediumTopIndex) << "  Fast Key: " << convertNumberToString(FastTopIndex) << "\n\n";
-	cout << "Please input the plug board settings first, press ';' to exit\n";
+	//cout << "Please input the plug board settings first, press ';' to exit\n";
+	cout<<"Please set up the plug board swaps.\n To do this enter letters when prompted. \n Every pair of letters will form a swaping pair.\n You may not repeat entry of any letters.\n Enter ; at any time to exit plug board set up. \n"; 
 	
 	while(boolInputToPlugTrue == false)
 	{
